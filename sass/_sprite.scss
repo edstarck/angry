@@ -1,0 +1,277 @@
+%svg-common {
+	background: url("../img/sprite.svg") no-repeat;
+}
+
+.angry_rubin {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 160px;
+	height: 160px;
+}
+
+.arrow-next {
+	@extend %svg-common;
+	background-position: 0 5.625879043600563%;
+	width: 44.12px;
+	height: 95px;
+}
+
+.arrow-prev {
+	@extend %svg-common;
+	background-position: 0 8.966244725738397%;
+	width: 44.13px;
+	height: 95px;
+}
+
+.arrow_down {
+	@extend %svg-common;
+	background-position: 0 12.031625988312134%;
+	width: 28.03px;
+	height: 30px;
+}
+
+.bad_icon {
+	@extend %svg-common;
+	background-position: 0 13.187301322894543%;
+	width: 57.63px;
+	height: 57.44px;
+}
+
+.bot_icon {
+	@extend %svg-common;
+	background-position: 0 15.200099945862657%;
+	width: 56.72px;
+	height: 57.44px;
+}
+
+.circle-01 {
+	@extend %svg-common;
+	background-position: 0 18.242000735564545%;
+	width: 220px;
+	height: 220px;
+}
+
+.circle-02 {
+	@extend %svg-common;
+	background-position: 0 26.333210739242368%;
+	width: 220px;
+	height: 220px;
+}
+
+.circle-03 {
+	@extend %svg-common;
+	background-position: 0 34.42442074292019%;
+	width: 220px;
+	height: 220px;
+}
+
+.copyright {
+	@extend %svg-common;
+	background-position: 0 39.95852056688559%;
+	width: 47px;
+	height: 46px;
+}
+
+.favourite_icon {
+	@extend %svg-common;
+	background-position: 0 41.71351628978748%;
+	width: 57.63px;
+	height: 57.44px;
+}
+
+.fb--gray {
+	@extend %svg-common;
+	background-position: 0 43.9177413733008%;
+	width: 70px;
+	height: 70px;
+}
+
+.fb--white {
+	@extend %svg-common;
+	background-position: 0 46.036690896503984%;
+	width: 51px;
+	height: 50px;
+}
+
+.foursquare--gray {
+	@extend %svg-common;
+	background-position: 0 48.11715481171548%;
+	width: 56px;
+	height: 71px;
+}
+
+.foursquare--white {
+	@extend %svg-common;
+	background-position: 0 50.242382271468145%;
+	width: 43px;
+	height: 51px;
+}
+
+.good_icon {
+	@extend %svg-common;
+	background-position: 0 52.12454364996738%;
+	width: 57.66px;
+	height: 57.44px;
+}
+
+.google--gray {
+	@extend %svg-common;
+	background-position: 0 54.39330543933055%;
+	width: 70px;
+	height: 71px;
+}
+
+.google--white {
+	@extend %svg-common;
+	background-position: 0 56.47506925207756%;
+	width: 52px;
+	height: 51px;
+}
+
+.icon_copyright {
+	@extend %svg-common;
+	background-position: 0 58.14033874870377%;
+	width: 46px;
+	height: 46px;
+}
+
+.instagram--gray {
+	@extend %svg-common;
+	background-position: 0 60.23004531195539%;
+	width: 70px;
+	height: 70px;
+}
+
+.instagram--white {
+	@extend %svg-common;
+	background-position: 0 62.23606784354448%;
+	width: 51px;
+	height: 50px;
+}
+
+.instagram_icon {
+	@extend %svg-common;
+	background-position: 0 63.83419689119171%;
+	width: 44px;
+	height: 44px;
+}
+
+.magnifer {
+	@extend %svg-common;
+	background-position: 0 66.52601969057665%;
+	width: 110px;
+	height: 95px;
+}
+
+.normal_icon {
+	@extend %svg-common;
+	background-position: 0 68.95570454892488%;
+	width: 57.63px;
+	height: 57.44px;
+}
+
+.paper {
+	@extend %svg-common;
+	background-position: 0 72.08674379419499%;
+	width: 113.11px;
+	height: 102.14px;
+}
+
+.post_icon {
+	@extend %svg-common;
+	background-position: 0 74.29877932778282%;
+	width: 57.63px;
+	height: 47.97px;
+}
+
+.posts {
+	@extend %svg-common;
+	background-position: 0 76.01246105919003%;
+	width: 60px;
+	height: 50px;
+}
+
+.robot {
+	@extend %svg-common;
+	background-position: 0 78.01319902744008%;
+	width: 60px;
+	height: 60px;
+}
+
+.smile {
+	@extend %svg-common;
+	background-position: 0 80.09725599166377%;
+	width: 60px;
+	height: 60px;
+}
+
+.smile-2 {
+	@extend %svg-common;
+	background-position: 0 82.18131295588746%;
+	width: 60px;
+	height: 60px;
+}
+
+.smile-3 {
+	@extend %svg-common;
+	background-position: 0 84.26536992011116%;
+	width: 60px;
+	height: 60px;
+}
+
+.star {
+	@extend %svg-common;
+	background-position: 0 86.34942688433483%;
+	width: 60px;
+	height: 60px;
+}
+
+.statistics {
+	@extend %svg-common;
+	background-position: 0 88.52573018080668%;
+	width: 63px;
+	height: 63px;
+}
+
+.stats_icon {
+	@extend %svg-common;
+	background-position: 0 90.6198550915924%;
+	width: 60.16px;
+	height: 59.94px;
+}
+
+.studio {
+	@extend %svg-common;
+	background-position: 0 92.25717248530937%;
+	width: 67px;
+	height: 46px;
+}
+
+.twitter--gray {
+	@extend %svg-common;
+	background-position: 0 94.30357763112191%;
+	width: 70px;
+	height: 60px;
+}
+
+.twitter--white {
+	@extend %svg-common;
+	background-position: 0 95.85492227979275%;
+	width: 51px;
+	height: 44px;
+}
+
+.vk--gray {
+	@extend %svg-common;
+	background-position: 0 98.25723248518648%;
+	width: 70px;
+	height: 70px;
+}
+
+.vk--white {
+	@extend %svg-common;
+	background-position: 0 100%;
+	width: 51px;
+	height: 50px;
+}
+

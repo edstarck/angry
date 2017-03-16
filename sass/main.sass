@@ -1,0 +1,1381 @@
+@import "bourbon"
+@import "vars.sass"
+@import "sprite.scss"
+
+//Load Libs SASS
+@import "fonts.sass"
+@import "app/libs/swiper/swiper.min"
+
+
+*::-webkit-input-placeholder
+	color: gray
+	opacity: 1
+	font-family: "SFUIDisplay-Ultralight", sans-serif
+	font-size: 16px
+	font-weight: 300
+	letter-spacing: 0.014em
+	text-align: center
+	@media (min-width: 500px)
+		font-size: 18px
+
+*:-moz-placeholder
+	color: gray
+	opacity: 1
+	font-size: 16px
+	font-weight: 300
+	font-family: "SFUIDisplay-Ultralight", sans-serif
+	text-align: center
+	@media (min-width: 500px)
+		font-size: 18px
+
+*::-moz-placeholder
+	color: gray
+	opacity: 1
+	font-size: 16px
+	font-weight: 300
+	font-family: "SFUIDisplay-Ultralight", sans-serif
+	text-align: center
+	@media (min-width: 500px)
+		font-size: 18px
+
+*:-ms-input-placeholder
+	color: gray
+	opacity: 1
+	font-size: 16px
+	font-weight: 300
+	font-family: "SFUIDisplay-Ultralight", sans-serif
+	text-align: center
+	@media (min-width: 500px)
+		font-size: 18px
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "SFUIDisplay-Light", sans-serif
+	overflow-x: hidden
+	background: #232323
+
+.wrap
+	width: 100%
+	position: relative
+
+.hidden
+	display: none
+
+#loading
+	background-color: #fff
+	height: 100%
+	width: 100%
+	position: fixed
+	z-index: 1300
+	margin-top: 0px
+	top: 0px
+#loading-center
+	width: 100%
+	height: 100%
+	position: relative
+#loading-center-absolute
+	position: absolute
+	left: 50%
+	top: 50%
+	height: 150px
+	width: 150px
+	margin-top: -75px
+	margin-left: -75px
+.object
+	width: 20px
+	height: 20px
+	background-color: #e0111b
+	float: left
+	margin-right: 20px
+	margin-top: 65px
+	border-radius: 50% 50% 50% 50%
+#object_one
+	animation: object_one 1.5s infinite
+#object_two
+	animation: object_two 1.5s infinite
+	animation-delay: 0.25s
+#object_three
+	animation: object_three 1.5s infinite
+	animation-delay: 0.5s
+@keyframes object_one
+	75%
+		transform: scale(0)
+@keyframes object_two
+	75%
+		transform: scale(0)
+@keyframes object_three
+	75%
+		transform: scale(0)
+
+.overflow
+	overflow: hidden
+
+.btn
+	display: block
+	margin: 0 auto
+	width: 290px
+	height: 50px
+	background: #e0111b
+	border: 1px solid #e0111b
+	color: #fff
+	font-size: 18px
+	border-radius: 10px
+	color: #fff
+	line-height: 2.45
+	&:hover
+		color: #e0111b
+		border: 1px solid #e0111b
+		background: #fff
+		transition: all 0.4s ease
+	&--enter
+		width: 115px
+		height: 30px
+		display: none
+		font-size: 14px
+		outline: 0!important
+		padding: 0
+		background-color: #fff
+		border-radius: 5px
+		border: 1px solid #e0111b
+		color: #e0111b
+		transition: all .4s ease
+		&:hover
+			color: #fff
+			background-color: #e0111b
+			transition: all .4s ease
+			border: 1px solid transparent
+		@media (min-width: 1050px)
+			display: inline-block
+	&--top
+		margin-top: 50px
+
+.gumburger
+	position: fixed
+	width: 41px
+	height: 31px
+	top: 22px
+	right: 15px
+	z-index: 1000
+	display: block
+	@media (min-width: 1200px)
+		right: 40px
+		display: none
+.McButton
+	$bar-w: 41px
+	$bar-h: 3px
+	$bar-color: #000
+	position: absolute
+	top: 50%
+	left: 50%
+	margin-left: -($bar-w /2)
+	margin-top: -($bar-w /2)
+	width: $bar-w
+	height: ($bar-w *3) /4
+	cursor: pointer
+	b
+		position: absolute
+		right: 0
+		width: $bar-w
+		height: $bar-h
+		background-color: $bar-color
+		border-radius: 2px
+		&:nth-child(1)
+			top: 0
+			width: 35px
+		&:nth-child(2)
+			top: 50%
+			width: 31px
+		&:nth-child(3)
+			top: 100%
+.McButton.active
+	b
+		background-color: #000 !important
+		&:nth-child(1)
+				top: 0
+				width: 100% !important
+		&:nth-child(2)
+			top: 50%
+			width: 100% !important
+		&:nth-child(3)
+			top: 100%
+			width: 100% !important
+
+.logo
+	width: 133px
+	height: 62px
+
+.header
+	width: 100%
+	background: rgba(#fff, .95)
+	height: 70px
+	position: fixed
+	z-index: 500
+	border-bottom: 1px solid rgba(gray, 0.3)
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&--white
+			height: 100%
+			width: 100%
+			position: absolute
+			top: 0
+			left: 0
+			background-color: #fff
+			z-index: 10
+			opacity: 0.3
+	&__list
+		margin: 0 0 0 55px
+		padding: 0
+		list-style-type: none
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		display: none
+		@media (min-width: 1200px)
+			display: flex
+	&__item
+		margin-right: 45px
+	&__link
+		color: gray
+		font-family: "SFUIDisplay-Light", sans-serif
+		font-size: 16px
+		text-decoration: none
+		transition: all .4s ease
+		&:hover
+			color: #e0111b
+	&__phone
+		text-align: left
+		flex: 1
+		display: none
+		@media (min-width: 500px)
+			display: block
+		@media (min-width: 1200px)
+			text-align: right
+		span
+			display: inline-block
+			margin-left: 56px
+			line-height: 30px
+			font-size: 24px
+			font-weight: 400
+			vertical-align: middle
+.mobile-menu
+	display: none
+	opacity: 0
+
+.first-screen
+	width: 100%
+	height: 100%
+	background-color: #fff
+	overflow: hidden
+	position: relative
+	background-image: url("../img/picture/video_blank.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	z-index: 50
+	top: 0
+	left: 0
+	z-index: 50
+	@media (min-width: 700px)
+		height: 100vh
+	@media (min-width: 1050px)
+		position: absolute
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+			position: relative
+	&__wrap
+		height: 100%
+		text-align: center
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		z-index: 20
+		position: relative
+		@media (min-width: 700px)
+			height: 100vh
+	&__logo
+		margin-top: 130px
+		width: 120px
+		@media (min-width: 1050px)
+			margin-top: 0
+			width: auto
+		img
+			width: 100%
+			height: auto
+	&__title
+		color: #000
+		text-align: center
+		font-size: 25px
+		font-family: "SFUIDisplay-Light", Arial, sans-serif;
+		font-weight: 400
+		line-height: 30px
+		@media (min-width: 600px)
+			font-size: 40px
+			line-height: 1.1
+			letter-spacing: -.027em
+			margin-bottom: 35px
+		&--left
+			text-align: left
+			margin-bottom: 20px
+	&__text
+		width: 100%
+		p
+			color: grey
+			margin: 0 auto 25px auto
+			max-width: 700px
+			font-size: 20px
+			font-family: "SFUIDisplay-Light", Arial, sans-serif;
+			font-weight: 400
+			line-height: 24px
+			letter-spacing: .034em
+	&__button
+		width: 290px
+		height: 50px
+		line-height: 50px
+		text-align: center
+		border-radius: 10px
+		display: none
+		margin: 0 auto 30px auto
+		@media (min-width: 700px)
+			margin-bottom: 0
+		@media (min-width: 1050px)
+			display: block
+
+		&--blue
+			display: block
+			margin-top: 40px
+			color: #fff
+			background-color: #60a6f1
+			border: 1px solid #60a6f1
+_:-ms-lang(x), .first-screen
+	position: relative
+.header__video-wrapp
+	position:absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: hidden
+.header__video-box
+	position: absolute
+	top: 0
+	width: 100%
+	height: 100%
+	z-index: -1
+.header__video
+	display: none
+	width: 100%
+	height: 100%
+	object-fit: cover
+	@media (min-width: 750px)
+		display: block
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+		height: auto
+_:-ms-lang(x), .header__video
+	height: auto
+.scroll
+	display: none
+	width: 100px
+	height: 70px
+	position: absolute
+	bottom: 0
+	left: 50%
+	margin-left: -50px
+	text-align: center
+	z-index: 100
+	@media (min-width: 1050px)
+		display: block
+	&--down
+		bottom: -45%
+		@media (min-width: 1440px)
+			bottom: -80%
+		@media (min-width: 1800px)
+			bottom: -95%
+		@media (min-width: 2100px)
+			bottom: -100%
+_:-ms-lang(x), .scroll
+	display: none
+.scroll__mouse
+	display: block
+	position: absolute
+	top: 0
+	left: 50%
+	margin-left: -9px
+	width: 18px
+	height: 30px
+	border: 2px solid #ccc
+	border-radius: 9px
+	display: block
+	box-sizing: border-box
+.scroll__wheel
+	position: absolute
+	left: 50%
+	margin-left: -2px
+	top: 6px
+	width: 4px
+	height: 7px
+	background: #ccc
+	border-radius: 2px
+	transform-origin: 50% 0%
+.scroll__arrow
+	position: absolute
+	top: 35px
+	width: 10px
+	height: 10px
+	left: 50%
+	margin-left: -5px
+	&:before
+		content: ''
+	    @extend %svg-common
+		background-position: 0 12.031625988312134%
+		width: 28.03px
+		height: 30px
+		position: absolute
+		top: -10px
+		left: 50%
+		margin-left: -14px
+		animation: upDown 1.5s ease-out infinite
+@keyframes upDown
+	0%
+		transform: translateY(0px)
+	50%
+		transform: translateY(10px)
+	100%
+		transform: translateY(0px)
+
+#secondScreen
+	display: none
+	@media (min-width: 1050px)
+		display: block
+.animation__wrap
+	width: 100%
+	height: 100vh
+	overflow: hidden
+	position: relative
+	backface-visibility: hidden
+	display: block
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+		height: auto
+_:-ms-lang(x), .animation__wrap
+	height: auto
+.animation
+	position: fixed
+	width: 100%
+	height: 100%
+	background-image: url("../img/picture/step1.jpg")
+	background-size: 150%
+	background-position: center center
+	top: 0
+	left: 0
+	transform-origin: 50%
+	z-index: -1
+	backface-visibility: hidden
+	will-change: transform
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+		background-size: 100%
+		position: relative
+		height: 100vh
+		opacity: 0.3
+_:-ms-lang(x), .animation
+	background-size: 100%
+	position: relative
+	height: 100vh
+	opacity: 0.3
+.animation--ipad
+	position: fixed
+	width: 100%
+	height: 100%
+	background-image: url("../img/picture/step2.jpg")
+	background-size: 250%
+	background-position: center center
+	background-repeat: no-repeat
+	top: 0
+	left: 0
+	transform-origin: 50%
+	z-index: 15
+	opacity: 0
+	backface-visibility: hidden
+	will-change: transform
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+		background-size: 100%
+		position: relative
+		opacity: 0.3
+		height: 100vh
+_:-ms-lang(x), .animation--ipad
+	background-size: 100%
+	position: relative
+	opacity: 0.3
+	height: 100vh
+.mac__text
+	position: fixed
+	width: 620px
+	height: 340px
+	z-index: 10
+	top: 50%
+	left: 50%
+	margin-top: -170px
+	margin-left: -310px
+	color: #fff
+	opacity: 0
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+		opacity: 1
+		position: absolute
+		top: 50vh
+		left: 50%
+		margin-top: 0
+		margin-left: 0
+		transform: translate(-50%, -50%)
+_:-ms-lang(x), .mac__text
+	opacity: 1
+	position: absolute
+	top: 50vh
+	left: 50%
+	margin-top: 0
+	margin-left: 0
+	transform: translate(-50%, -50%)
+	h3
+		margin-top: 0
+		font-size: 40px
+		margin-bottom: 0
+		font-weight: 400
+		line-height: 40px
+	p
+		font-size: 18px
+		font-weight: 400
+.mac__text2
+	position: fixed
+	width: 620px
+	height: 340px
+	z-index: 20
+	top: 50%
+	left: 50%
+	margin-top: -170px
+	margin-left: -310px
+	color: #fff
+	opacity: 0
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+		opacity: 1
+		position: absolute
+		top: 145vh
+		left: 50%
+		margin-top: 0
+		margin-left: 0
+		transform: translate(-50%, -50%)
+_:-ms-lang(x), .mac__text2
+	opacity: 1
+	position: absolute
+	top: 145vh
+	left: 50%
+	margin-top: 0
+	margin-left: 0
+	transform: translate(-50%, -50%)
+	h3
+		margin-top: 0
+		font-size: 40px
+		margin-bottom: 0
+		font-weight: 400
+		line-height: 40px
+	p
+		font-size: 18px
+		font-weight: 400
+
+.hate
+	display: inline-block
+	width: 190px
+	position: absolute
+	top: 0
+	left: -125px
+	background-repeat: no-repeat
+.loop
+	display: inline-block
+	position: absolute
+	top: -10px
+	left: -130px
+.icons-wrapper
+	max-width: 650px
+	margin: 0 auto
+.icons-colomn-left
+	width: 300px
+	white-space: nowrap
+.td
+	display: table-cell
+	vertical-align: bottom
+.icon-text-2
+	display: inline-block
+	vertical-align: middle
+.icons-colomn-right
+	width: 300px
+	white-space: nowrap
+
+.package
+	background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 3%, rgba(255,255,255,1) 100%)
+	padding: 30px 0 0 0
+	overflow: hidden
+	position: relative
+	z-index: 20
+	@media (min-width: 700px)
+		padding: 55px 0 0 0
+	&__wrap--gray
+		position: absolute
+		width: 100%
+		height: 130%
+		top: 0
+		left: 0
+		background-image: url("../img/picture/package_bg.png")
+		background-repeat: no-repeat
+		background-position: center 500px
+		z-index: 10
+		display: none
+		@media (min-width: 1050px)
+			display: block
+	&__wrap--red
+		position: absolute
+		width: 100%
+		height: 170%
+		top: 0
+		left: 0
+		z-index: 30
+		display: none
+		background-image: url("../img/picture/red-items.png")
+		background-repeat: no-repeat
+		background-position: center -415px
+		@media (min-width: 1050px)
+			display: block
+	&__slider
+		overflow: hidden
+		position: relative
+		max-width: 1274px
+		height: 490px
+		margin: 0 auto
+		z-index: 40
+		@media (min-width: 700px)
+			height: 440px
+		@media (min-width: 1000px)
+			height: 700px
+		@media (min-width: 1100px)
+			height: 765px
+			margin-top: 80px
+	&__slider-control
+		margin: 10px auto 70px auto
+		padding: 0
+		list-style-type: none
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		z-index: 60
+		position: relative
+		flex-direction: column
+		@media (min-width: 700px)
+			flex-direction: row
+		@media (min-width: 1050px)
+			width: 70%
+	&__slider-item
+		color: #ccc
+		font-size: 18px
+		font-weight: 300
+		font-style: italic
+		line-height: 24px
+		transition: all .4s ease
+		position: absolute
+		width: 250px
+		left: 50%
+		margin-left: -125px
+		margin-bottom: 10px
+		display: none
+	&__slider-item.active
+		display: block
+	&__text
+		p
+			color: grey
+			margin: 0 auto 60px auto
+			max-width: 795px
+			font-size: 16px
+			font-family: "SFUIDisplay-Light", Arial, sans-serif;
+			font-weight: 300
+			line-height: 1.3
+			text-align: center
+			letter-spacing: .012em
+			@media (min-width: 500px)
+				font-size: 20px
+				line-height: 1.4
+	&__ipad
+		position: absolute
+		width: 1024px
+		height: 759px
+		z-index: 20
+		overflow: hidden
+		background-image: url("../img/picture/slider_bg.png")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		display: none
+		@media (min-width: 700px)
+			width: 768px
+			height: 450px
+			display: block
+		@media (min-width: 980px)
+			width: 1024px
+			height: 759px
+		@media (min-width: 1050px)
+			width: 1269px
+			height: 759px
+	&__iphone
+		position: absolute
+		bottom: 0
+		right: 15px
+		width: 260px
+		height: 490px
+		right: 50%
+		margin-right: -130px
+		background-image: url("../img/picture/iphone_bg.png")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		z-index: 25
+		overflow: hidden
+		@media (min-width: 700px)
+			bottom: 0
+			right: 8px
+			width: 250px
+			height: 346px
+			margin-right: auto
+		@media (min-width: 980px)
+			bottom: 29px
+			right: 43px
+			width: 250px
+			height: 467px
+		@media (min-width: 1050px)
+			bottom: 29px
+			right: 76px
+			width: 288px
+			height: 587px
+.step
+	margin: 0
+	padding: 0
+	list-style-type: none
+	display: flex
+	justify-content: center
+	z-index: 15
+	position: relative
+	flex-direction: column
+	@media (min-width: 700px)
+		margin-top: 125px
+		flex-direction: row
+		justify-content: space-around
+	&__item
+		text-align: center
+		margin-bottom: 20px
+		img
+			display: block
+			margin: 0 auto
+			width: 60%
+			height: auto
+			@media (min-width: 980px)
+				width: 195px
+				height: 195px
+		span
+			margin: 10px auto 20px auto
+			display: block
+			color: gray
+			font-size: 16px
+			font-weight: 400
+			line-height: 1.4
+			@media (min-width: 500px)
+				font-size: 20px
+.mac__text
+	p
+		font-size: 16px
+		line-height: 1.4
+		@media(min-width: 500px)
+			font-size: 20px
+	h3
+		margin-top: 20px
+		margin-bottom: 10px
+		font-size: 30px
+		font-weight: 400
+.mac__text2
+	p
+		font-size: 16px
+		line-height: 1.4
+		@media(min-width: 500px)
+			font-size: 20px
+	h3
+		margin-top: 20px
+		margin-bottom: 10px
+		font-size: 30px
+		font-weight: 400
+.gallery-top
+	width: 567px
+	height: 358px
+	margin-top: 30px
+	display: none
+	@media (min-width: 700px)
+		display: block
+		width: 567px
+		height: 358px
+		margin-top: 30px
+	@media (min-width: 980px)
+		width: 774px
+		height: 490px
+		margin-top: 110px
+	@media (min-width: 1050px)
+		width: 960px
+		height: 600px
+		margin-top: 51px
+	.swiper-slide
+		background-size: cover
+	img
+		width: 100%
+		height: auto
+.swiper-slide
+	text-align: center
+	font-size: 18px
+	display: flex
+	justify-content: center
+	align-items: center
+	background-position: center center
+	background-repeat: no-repeat
+.swiper-button-next
+	height: 80px
+	margin-top: -40px
+	background-image: url("../img/icons/arrow-next.svg")
+	background-repeat: no-repeat
+	z-index: 400
+.swiper-button-prev
+	height: 80px
+	margin-top: -40px
+	background-image: url("../img/icons/arrow-prev.svg")
+	background-repeat: no-repeat
+	z-index: 400
+
+.gallery-thumbs
+	width: 210px
+	height: 370px
+	bottom: 58px
+	right: 50%
+	margin-right: -105px
+	overflow: hidden
+	position: absolute
+	z-index: 23
+	@media (min-width: 700px)
+		width: 148px
+		height: 263px
+		bottom: 40px
+		right: 59px
+		margin-right: auto
+	@media (min-width: 1000px)
+		width: 200px
+		height: 355px
+		bottom: 83px
+		right: 67px
+	@media (min-width: 1050px)
+		width: 246px
+		height: 438px
+		bottom: 101px
+		right: 96px
+	.swiper-slide
+		background-size: cover
+	img
+		width: 100%
+		height: auto
+
+.monitoring
+	margin-top: 0
+	z-index: 15
+	position: relative
+	@media (min-width: 700px)
+		margin-top: 95px
+
+.social-icons
+	&__wrap
+		display: flex
+		justify-content: space-around
+		align-items: center
+		flex-wrap: wrap
+.sc
+	width: 100px
+	height: 110px
+	text-align: center
+	padding-top: 1px
+	flex-basis: 100px
+.social_icon
+	display: block
+	margin: 0 auto
+
+.social-icon-name
+	display: block
+	font-size: 18px
+	color: gray
+	letter-spacing: .034em
+
+.box-section
+	max-width: 1140px
+	margin: 0 auto
+	margin-top: 50px
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	z-index: 15
+	position: relative
+	@media (min-width: 700px)
+		margin-top: 130px
+.box-text
+	width: 100%
+	@media (min-width: 700px)
+		width: 50%
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			position: relative
+			padding-bottom: 6px
+			color: gray
+			font-family: "SFUIDisplay-Light", Arial, sans-serif
+			font-size: 20px
+			font-weight: 400
+			line-height: 1.4
+			letter-spacing: 0.06em
+			&:before
+				content: "— "
+				padding-right: 6px
+	h4
+		margin-top: 20px
+		margin-bottom: 10px
+		font-size: 30px
+		font-weight: lighter
+.box-picture
+	width: 100%
+	box-sizing: border-box
+	padding-left: 55px
+	@media (min-width: 700px)
+		width: 50%
+	img
+		max-width: 100%
+
+.form-section
+	padding-top: 60px
+	max-width: 700px
+	margin: 0 auto
+	text-align: center
+	z-index: 60
+	position: relative
+	form
+		max-width: 595px
+		margin: 0 auto
+		padding: 0 20px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		@media(min-width: 500px)
+			margin: -26px auto 0
+			padding: 0
+		input
+			display: inline-block
+			margin: 10px 0 0 0
+			width: 100%
+			height: 50px
+			border: 1px solid #e0e0e0
+			border-radius: 6px
+			// padding-left: 30px
+			&:focus
+				outline: none
+				box-shadow: 0px 0px 5px 0px rgba(50,50,50,0.1)
+			@media(min-width: 500px)
+				width: 290px
+.form-error input
+	border-color: #f00 !important
+
+#success-message
+	display: none
+	font-size: 24px
+	padding-bottom: 50px
+
+.yandex-map-block
+	width: 100%
+.yandex-map
+	width: 100%
+	height: 501px
+	position: relative
+	z-index: 50
+	background-image: url("../img/picture/map_bg.png")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+
+.prefooter
+	padding: 40px 0
+	background-color: #f2f2f2
+	border-top: 1px solid #fff
+	position: relative
+	z-index: 50
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__menu
+		margin: 0
+		padding: 0
+		list-style-type: none
+		display: none
+		@media (min-width: 480px)
+			display: block
+	&__info
+		margin: 0 auto
+		@media (min-width: 480px)
+			margin: 0
+	&__list
+		margin: 0
+		padding: 0
+		list-style-type: none
+		text-align: center
+		@media (min-width: 480px)
+			text-align: right
+	&__phone
+		a
+			color: gray
+			font-size: 30px
+			font-weight: 400
+			text-decoration: none
+			outline: none
+	&__mail
+		a
+			color: #60a6f1
+			font-size: 14px
+			font-weight: 300
+			line-height: 20px
+			text-decoration: underline
+			outline: none
+	&__adress
+		color: #999
+		font-size: 14px
+		font-weight: 300
+		line-height: 20px
+		span
+			display: block
+.footer
+	background-color: #fff
+	position: relative
+	z-index: 50
+	&__social
+		display: none
+		@media(min-width: 750px)
+			display: block
+.footer__wrap
+	height: 120px
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	align-items: center
+	flex-direction: column
+	@media (min-width: 600px)
+		flex-direction: row
+		height: 100px
+		justify-content: space-between
+.footer__copiright
+	padding-left: 30px
+	background-image: url("../img/icons/icon_copyright.svg")
+	background-repeat: no-repeat
+	background-position: left center
+	background-size: 20px
+	@media (min-width: 600px)
+		background-size: 26px
+		padding-left: 38px
+	span
+		display: block
+		color: #808080
+		font-size: 10px
+		font-weight: 400
+		line-height: 12px
+		@media (min-width: 600px)
+			font-size: 12px
+			line-height: 14px
+.social
+	padding: 0
+	margin: 8px auto
+	@media (min-width: 480px)
+		padding-left: 40px
+.social__item
+	width: 20px
+	height: 20px
+	display: block
+	margin: 0 5px
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	display: inline-block
+	vertical-align: middle
+	@media (min-width: 400px)
+		width: 24px
+		height: 24px
+	a
+		display: block
+		height: 24px
+.social__item_inst
+	background-image: url("../img/icons/instagram_icon.svg")
+.footer__studio
+	text-align: right
+	line-height: 14px
+	margin-top: 15px
+	@media (min-width: 500px)
+		margin-top: 0
+	a
+		color: #808080
+		position: relative
+		font-size: 10px
+		font-weight: 400
+		line-height: 12px
+		text-decoration: none
+		outline: none
+		padding-right: 60px
+		display: block
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			width: 46px
+			height: 25px
+			background-image: url("../img/icons/studio.svg")
+			background-repeat: no-repeat
+		@media (min-width: 600px)
+			font-size: 12px
+			line-height: 14px
+
+// Overlay
+.overlay
+	position: fixed
+	width: 100%
+	height: 100%
+	min-height: 100%
+	top: 0
+	left: 0
+	background-image: linear-gradient(to top, #fff 0%, #fff 100%)
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	z-index: 500
+/* Menu style */
+.overlay nav
+	text-align: center
+	position: relative
+.overlay .overlay__phone
+	text-align: left
+	position: relative
+	margin-top: 15px
+	margin-left: 15px
+	@media (min-width: 1100px)
+		margin-left: 40px
+		margin-top: 17px
+.overlay .overlay__footer
+	position: relative
+.overlay ul
+	list-style: none
+	padding: 0
+	margin: 0 auto
+	display: inline-block
+	height: 100%
+	position: relative
+.overlay ul li
+	display: block
+	backface-visibility: hidden
+	text-align: center
+	@media (min-width: 1100px)
+		display: inline-block
+		text-align: left
+	&:first-child
+		display: none
+		@media (min-width: 1050px)
+			display: inline-block
+	&:last-child
+		a
+			background-image: none
+.overlay ul li a
+	display: block
+	padding: 0 40px
+	color: #60a6f1
+	font-family: "SFUIDisplay-Light", Arial, sans-serif
+	font-size: 30px
+	font-weight: 400
+	line-height: 40px
+	transition: color 0.2s
+	text-decoration: none
+	outline: none
+	background-image: none
+	background-repeat: no-repeat
+	background-position: right center
+.overlay ul li a:hover,
+.overlay ul li a:focus
+	color: gray
+/* Effects */
+.overlay-hugeinc
+	opacity: 0
+	visibility: hidden
+	transition: opacity .5s, visibility 0s .5s
+.overlay-hugeinc.open
+	opacity: 1
+	visibility: visible
+	transition: opacity .5s
+.overlay-hugeinc nav,
+.overlay-hugeinc .overlay-close,
+.overlay-hugeinc .overlay__phone,
+.overlay-hugeinc .overlay__footer,
+.overlay-hugeinc .overlay__footer-copyright
+	opacity: 0
+	transition: opacity .4s .4s
+.overlay-hugeinc.open nav,
+.overlay-hugeinc.open .overlay-close,
+.overlay-hugeinc.open .overlay__phone,
+.overlay-hugeinc.open .overlay__footer,
+.overlay-hugeinc.open .overlay__footer-copyright
+	opacity: 1
+	transition-delay: .4s
+.overlay-hugeinc.close nav,
+.overlay-hugeinc.close .overlay-close,
+.overlay-hugeinc.close .overlay__phone,
+.overlay-hugeinc.close .overlay__footer,
+.overlay-hugeinc.close .overlay__footer-copyright
+	transition-delay: 0s
+.overlay__phone--number
+	display: block
+	color: #000
+	font-family: "SFUIDisplay-Light", Arial, sans-serif
+	font-size: 20px
+	font-weight: 300
+	line-height: 20px
+	text-decoration: none
+	@media (min-width: 400px)
+		font-size: 30px
+.overlay__phone--time
+	display: block
+	color: #000
+	font-family: "SFUIDisplay-Light", Arial, sans-serif
+	font-size: 12px
+	font-weight: 300
+	line-height: 17px
+	@media (min-width: 400px)
+		font-size: 14px
+		font-weight: 300
+		line-height: 35px
+.overlay__footer-copyright
+	color: #ccc
+	font-size: 11px
+	font-weight: 300
+	line-height: 20px
+	@media (min-width: 400px)
+		font-size: 14px
+.overlay__menu .overlay__item
+	&:last-child
+		a
+			padding: 0
+.overlay__menu .overlay__item a
+	color: #e8e8e8
+	font-size: 14px
+	font-weight: 300
+	line-height: 20px
+	text-decoration: underline
+	padding: 0 19px
+	background-image: none
+	outline: none
+	&:hover
+		text-decoration: none
+.overlay__footer
+	padding: 0 15px
+	height: 80px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	@media (min-width: 500px)
+		padding: 0 40px
+.overlay .overlay__menu
+	height: auto
+	margin: 0
+
+.swiper-pagination
+	position: relative
+	text-align: center
+	transition: .3s
+	transform: translate3d(0,0,0)
+	z-index: 50
+	width: 75%
+	@media (min-width: 700px)
+		width: 70%
+
+.swiper-pagination-bullet
+	width: auto
+	height: auto
+	display: inline-block
+	border-radius: 100%
+	background: #000
+	opacity: .2
+
+.angry__menu-wrap
+	width: 290px
+	display: none
+	align-items: flex-start
+	justify-content: space-between
+	@media (min-width: 700px)
+		display: flex
+.angry__menu
+	&--event
+
+.angry__menu-title
+	display: block
+	margin-bottom: 30px
+	color: #505050
+	font-size: 16px
+	line-height: 20px
+	text-transform: uppercase
+
+.angry__menu-link
+	color: #999
+	font-size: 14px
+
+.section__form
+	background-color: #e0101b
+
+.first-screen__title--white
+	color: #fefefe
+
+.section__form .package__text p
+	color: #f6cdce
+
+.section__form	.btn--top
+	background-color: #e0101b
+	border: 1px solid white
+	border-radius: 10px
+	&:hover
+		background-color: #fff
+
+#try-form
+	padding-bottom: 100px
+
+.partners
+	position: relative
+	z-index: 20
+	padding: 80px 0
+	background-color: #FFF
+	&__grid
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap;
+	&__brick
+		margin: 0 40px 20px 40px
+		img
+			max-width: 100%
+
+.clients
+	padding: 80px 0
