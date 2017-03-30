@@ -100,7 +100,7 @@ $(function(){
         window.onscroll = function() {
             var scrollHeight   = window.pageYOffset || document.documentElement.scrollTop,
                 newSize        = size - (scrollHeight) * 1.2;
-                
+
             // if (newSize > el.width()) {
                 el.css({
                     '-webkit-background-size': newSize,
@@ -405,5 +405,5 @@ $(function(){
 //     })
 // }
 
-$("#loading").fadeOut(500);
+$("#loading").fadeOut();
 $('body').removeClass('overflow');
