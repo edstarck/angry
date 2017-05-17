@@ -1,6 +1,5 @@
 Stage(function(stage) {
 
-  // shipBody.render = { lineColor : '#808080' };
   var Math = Stage.Math;
 
   var SHIP = Math.pow(2, 1);
@@ -73,11 +72,13 @@ Stage(function(stage) {
       angularVelocity : 1,
     }).noDamping();
 
+    shipBody.render = {
+      fillColor : '#e1181e'
+    };
+
     shipBody.fromPolygon(path);
     shipBody.shapes[0].collisionGroup = SHIP;
     shipBody.shapes[0].collisionMask = ASTEROID;
-
-    shipBody.render = { fillColor : '#e1181e' };
 
     // Catch impacts in the world
     // Todo: check if several bullets hit the same asteroid in the same time
@@ -256,6 +257,10 @@ Stage(function(stage) {
       angularVelocity : va
     }).noDamping();
 
+    asteroidBody.render = {
+      lineColor : '#808080',
+    };
+
     var radius = asteroidLevelRadius(level);
 
     var path = [];
@@ -381,7 +386,7 @@ Stage(function(stage) {
   init();
 
   ui.p2 = new Stage.P2(world, {
-    lineColor : '#808080',
+    lineColor : '#e1181e',
     fillColor : ''
   }).pin({
     handle : -0.5,
